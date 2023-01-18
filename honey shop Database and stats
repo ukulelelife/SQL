@@ -1,0 +1,28 @@
+---Create a honey shop database
+
+CREATE TABLE honey_shop (id INTEGER PRIMARY KEY, name TEXT, quanity INTEGER, price INTEGER, rating INTEGER);
+
+INSERT INTO honey_shop VALUES (1, "regular bee honey", 4,5,5);
+INSERT INTO honey_shop VALUES (2, "organic bee honey", 4,7,5);
+INSERT INTO honey_shop VALUES (3, "spicy bee honey", 4,5,5);
+INSERT INTO honey_shop VALUES (4, "sweet bee organic honey", 4,6,5);
+INSERT INTO honey_shop VALUES (5, "herbal mixed bee honey", 4,6,5);
+INSERT INTO honey_shop VALUES (6, "paprika bee honey", 4,5,5);
+INSERT INTO honey_shop VALUES (7, "medicinal bee honey", 4,9,5);
+INSERT INTO honey_shop VALUES (8, "rock on bee honey", 4,6,4);
+INSERT INTO honey_shop VALUES (9, "scovial bee honey", 4, 6, 3);
+INSERT INTO honey_shop VALUES (10, "big bang theory bee honey",4,5,2);
+INSERT INTO honey_shop VALUES (11, "anti hero bee honey", 4, 5, 4);
+INSERT INTO honey_shop VALUES (12, "big dipper bee honey", 4, 6, 5);
+INSERT INTO honey_shop VALUES (13, "pop rock bee honey", 4, 6, 5);
+INSERT INTO honey_shop VALUES (14, "trickster bee honey", 4, 4, 3);
+INSERT INTO honey_shop VALUES (15,"boring fun bee honey", 4, 5, 5);
+
+--Dispay database ordered by price
+SELECT * FROM honey_shop ORDER BY price;
+
+--What are the higher rated honey options where the scale is from 1-5?
+SELECT * FROM honey_shop WHERE rating > 3;
+
+---what is the sum price of all honey options in store?
+SELECT SUM (price) FROM honey_shop
